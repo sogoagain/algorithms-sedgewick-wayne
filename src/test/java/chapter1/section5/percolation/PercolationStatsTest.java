@@ -3,8 +3,6 @@ package chapter1.section5.percolation;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 class PercolationStatsTest {
 
     private static PercolationStats percolationStats;

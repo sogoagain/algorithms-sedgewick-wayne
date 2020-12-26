@@ -62,12 +62,12 @@ public class LinkedQueue<T> implements Queue<T> {
 
         @Override
         public boolean hasNext() {
-            return current.next != null;
+            return current != null;
         }
 
         @Override
         public T next() {
-            final T item = (T) current.item;
+            final T item = current.item;
             current = current.next;
             return item;
         }

@@ -1,12 +1,18 @@
 package chapter1.section3.stack;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FixedCapacityStackTest {
 
-    final Stack<String> stack = new FixedCapacityStack<>(10);
+    private Stack<String> stack;
+
+    @BeforeEach
+    void setUp() {
+        stack = new FixedCapacityStack<>(10);
+    }
 
     @Test
     void pushAndPop() {
@@ -41,9 +47,13 @@ class FixedCapacityStackTest {
             stack.push(value);
         }
 
-        int i = values.length;
+        final String[] result = new String[values.length];
+        int i = 0;
         for (String item : stack) {
-            assertThat(item).isEqualTo(values[--i]);
+            result[i] = item;
+            i++;
         }
+
+        assertThat(result).containsExactlyInAnyOrder(values);
     }
 }

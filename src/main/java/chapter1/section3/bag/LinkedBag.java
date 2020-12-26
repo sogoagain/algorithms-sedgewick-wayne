@@ -1,28 +1,20 @@
-package chapter1.section3.stack;
+package chapter1.section3.bag;
 
 import java.util.Iterator;
 
-public class LinkedStack<T> implements Stack<T> {
+public class LinkedBag<T> implements Bag<T> {
 
     private Node first;
 
     private int N;
 
     @Override
-    public void push(T item) {
+    public void add(T item) {
         final Node oldFirst = first;
         first = new Node();
         first.item = item;
         first.next = oldFirst;
         N++;
-    }
-
-    @Override
-    public T pop() {
-        final T item = first.item;
-        first = first.next;
-        N--;
-        return item;
     }
 
     @Override

@@ -1,6 +1,5 @@
 package chapter1.section5.percolation;
 
-import chapter1.section5.percolation.Percolation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
