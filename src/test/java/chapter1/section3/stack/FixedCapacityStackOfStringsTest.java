@@ -43,7 +43,6 @@ class FixedCapacityStackOfStringsTest {
 
         int i = values.length;
         for (String item : stack) {
-            System.out.println(item);
             assertThat(item).isEqualTo(values[--i]);
         }
     }

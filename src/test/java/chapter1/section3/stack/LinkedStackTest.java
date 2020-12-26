@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ResizingArrayStackTest {
+class LinkedStackTest {
 
-    final Stack<String> stack = new ResizingArrayStack<>();
+    final Stack<String> stack = new LinkedStack<>();
 
     @Test
     void pushAndPop() {
