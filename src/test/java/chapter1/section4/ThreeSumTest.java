@@ -8,8 +8,7 @@ class ThreeSumTest {
 
     @Test
     void count() {
-        final int[] arr = {1, 2, 3, -1, -2, -3};
-
-        assertThat(ThreeSum.count(arr)).isEqualTo(2);
+        assertThat(ThreeSum.count(new int[]{1, 2, 3, -1, -2, -3})).isEqualTo(2);
+        assertThat(ThreeSum.count(new int[]{30, -40, -20, 10, 40, 0, 10, 5})).isEqualTo(4);
     }
 }
