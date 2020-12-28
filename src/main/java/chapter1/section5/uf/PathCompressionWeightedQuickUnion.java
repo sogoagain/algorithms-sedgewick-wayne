@@ -1,8 +1,8 @@
 package chapter1.section5.uf;
 
-public class PathCompressionWeightedQuickUnionUF extends WeightedQuickUnionUF {
+public class PathCompressionWeightedQuickUnion extends WeightedQuickUnion {
 
-    public PathCompressionWeightedQuickUnionUF(int N) {
+    public PathCompressionWeightedQuickUnion(int N) {
         super(N);
     }
 

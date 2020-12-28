@@ -1,11 +1,15 @@
 package chapter1.section5.uf;
 
-public class WeightedQuickUnionUF implements UF {
+public class WeightedQuickUnion implements UF {
 
     protected final int[] id;
+
     private final int[] sz;
 
-    public WeightedQuickUnionUF(int N) {
+    private int count;
+
+    public WeightedQuickUnion(int N) {
+        count = N;
         id = new int[N];
         for (int i = 0; i < N; i++) {
             id[i] = i;
@@ -37,6 +41,12 @@ public class WeightedQuickUnionUF implements UF {
             id[j] = i;
             sz[i] += sz[j];
         }
+        count--;
+    }
+
+    @Override
+    public int count() {
+        return count;
     }
 
     protected int root(int i) {
