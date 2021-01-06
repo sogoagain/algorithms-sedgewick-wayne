@@ -16,6 +16,7 @@ class DoublingTestTest {
     }
 
     @Test
+    @Disabled
     void doublingRatio() {
         double prev = DoublingTest.timeTrial(125);
         for (int N = 250; true; N += N) {

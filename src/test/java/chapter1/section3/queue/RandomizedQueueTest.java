@@ -1,6 +1,5 @@
 package chapter1.section3.queue;
 
-import chapter1.section3.queue.RandomizedQueue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
