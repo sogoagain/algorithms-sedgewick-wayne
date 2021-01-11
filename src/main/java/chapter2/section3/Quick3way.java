@@ -34,10 +34,6 @@ public class Quick3way {
         sort(arr, gt + 1, hi);
     }
 
-    private static boolean less(Comparable v, Comparable w) {
-        return v.compareTo(w) < 0;
-    }
-
     private static void exchange(Comparable[] arr, int i, int j) {
         final Comparable temp = arr[i];
         arr[i] = arr[j];
