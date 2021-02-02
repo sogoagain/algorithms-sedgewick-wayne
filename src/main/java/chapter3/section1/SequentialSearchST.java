@@ -44,7 +44,7 @@ public class SequentialSearchST<Key, Value> implements ST<Key, Value> {
 
     @Override
     public boolean isEmpty() {
-        return size() != 0;
+        return size() == 0;
     }
 
     @Override
