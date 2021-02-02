@@ -2,31 +2,31 @@ package chapter3.section1;
 
 public class FrequencyCounter {
 
-    private final SymbolTable<String, Integer> symbolTable;
+    private final ST<String, Integer> st;
 
-    public FrequencyCounter(SymbolTable<String, Integer> symbolTable) {
-        this.symbolTable = symbolTable;
+    public FrequencyCounter(ST<String, Integer> st) {
+        this.st = st;
     }
 
-    public String count(int minLength, String[] texts) {
-        for (String text : texts) {
-            final String[] words = text.split(" ");
-            for (String word : words) {
+    public String count(int minLength, String texts) {
+        for (String text : texts.split("\n")) {
+            for (String word : text.split(" ")) {
                 if (word.length() < minLength) {
                     continue;
                 }
-                if (!symbolTable.contains(word)) {
-                    symbolTable.put(word, 1);
+                if (!st.contains(word)) {
+                    st.put(word, 1);
                 } else {
-                    symbolTable.put(word, symbolTable.get(word) + 1);
+                    st.put(word, st.get(word) + 1);
                 }
             }
         }
 
         String max = "";
-        symbolTable.put(max, 0);
-        for (String word : symbolTable.keys()) {
-            if (symbolTable.get(word) > symbolTable.get(max)) {
+        st.put(max, 0);
+        for (String word : st.keys()) {
+            System.out.println("key: " + word + " ," + "value: " + st.get(word));
+            if (st.get(word) > st.get(max)) {
                 max = word;
             }
         }
